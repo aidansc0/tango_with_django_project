@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 
 {% load static %}
+{% load media %}
 
 <html>
     <head>
-        <title>Rango</title>
+        <title>Rango - About</title>
     </head>
 
     <body>
         <h1>Rango says...</h1>
         <div>
-            hey there partner! <br />
+            here is the about page! <br />
             <strong>{{ boldmessage }}</strong> <br />
         </div>
         <div>
-            <a href="/rango/about">About</a><br />
+            <a href="/rango/index">Home</a><br />
             <img src="{% static 'images/grinman.png' %}" alt="Picture of Grinman" />
+            <img src="{% media 'cat.jpg' %}" alt="Picture of Cat" />
         </div>
     </body>
 
