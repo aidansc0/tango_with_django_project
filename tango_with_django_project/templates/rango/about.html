@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 {% load static %}
-{% load media %}
 
 <html>
     <head>
@@ -16,8 +15,8 @@
         </div>
         <div>
             <a href="/rango/index">Home</a><br />
-            <img src="{% static 'images/grinman.png' %}" alt="Picture of Grinman" />
-            <img src="{% media 'cat.jpg' %}" alt="Picture of Cat" />
+            <img src="{% static 'images/rango.png' %}" alt="Picture of Rango" />
+            <img src="{{ MEDIA_URL }}cat.jpg " alt="Picture of Cat" />
         </div>
     </body>
 
