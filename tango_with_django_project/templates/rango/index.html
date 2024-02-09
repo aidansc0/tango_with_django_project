@@ -15,7 +15,8 @@
         </div>
 
         <div>
-            {% if categories % }
+            <h2>Most Liked categories</h2>
+            {% if categories %}
             <ul>
                 {% for category in categories %}
                 <li><a href="/rango/category/{{ category.slug }}"/>{{ category.name }}</a></li>
@@ -25,7 +26,22 @@
             <strong>There are no categories present.</strong>
             {% endif %}
         </div>
+
         <div>
+            {% if pages %}
+            <h2>Top 5 most viewed pages:</h2>
+            <ul>
+                {% for page in pages %}
+                <li><a href="{{ page.url }}">{{ page.title }}</a> - Views: {{ page.views }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <strong>There are no pages present.</strong>
+            {% endif %}
+        </div>
+
+        <div>
+            <a href="/rango/add_category">Add a New Category</a><br />
             <a href="/rango/about">About</a><br />
             <img src="{% static 'images/rango.png' %}" alt="Picture of Grinman" />
         </div>
