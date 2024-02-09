@@ -1,0 +1,12 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Restricted
+{% endblock %}
+
+{% block body_block %}
+    <h1>Rango says...</h1>
+    <strong>Unauthorised - Please Login.</strong><br />
+    <a href="{% url 'rango:index' %}">Return to the homepage.</a>
+{% endblock %}
