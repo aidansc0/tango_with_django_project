@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+% extends 'rango/base.html' %}
 {% load static %}
 
 <html>
@@ -14,7 +15,6 @@
             <strong>{{ boldmessage }}</strong> <br />
         </div>
         <div>
-            <a href="/rango/index">Home</a><br />
             <img src="{% static 'images/rango.png' %}" alt="Picture of Rango" />
             <img src="{{ MEDIA_URL }}cat.jpg " alt="Picture of Cat" />
         </div>
